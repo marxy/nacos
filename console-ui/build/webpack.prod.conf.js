@@ -22,15 +22,15 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const [cssLoader]  = base.module.rules;
-cssLoader.use.push({
-  loader: '@alifd/next-theme-loader',
-  options: {
-    modifyVars: {
-      '$icon-font-path': '"/nacos/console-ui/public/icons/icon-font"',
-      '$font-custom-path': '"/nacos/console-ui/public/fonts/"'
-    }
-  }
-})
+// cssLoader.use.push({
+//   loader: '@alifd/next-theme-loader',
+//   options: {
+//     modifyVars: {
+//       '$icon-font-path': '"/nacos/console-ui/public/icons/icon-font"',
+//       '$font-custom-path': '"/nacos/console-ui/public/fonts/"'
+//     }
+//   }
+// })
 module.exports = Object.assign({}, base, {
   optimization: {
     minimizer: [
